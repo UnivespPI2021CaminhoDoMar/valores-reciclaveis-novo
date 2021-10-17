@@ -6,12 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { ValoresDescricaoComponent } from './valores-descricao/valores-descricao.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ValoresDescricaoComponent
+    ValoresDescricaoComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
