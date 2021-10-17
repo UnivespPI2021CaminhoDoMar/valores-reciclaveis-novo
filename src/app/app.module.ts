@@ -7,13 +7,15 @@ import { ValoresDescricaoComponent } from './valores-descricao/valores-descricao
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+import { PostarDadosComponent } from './postar-dados/postar-dados.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ValoresDescricaoComponent,
-    MenuComponent
+    MenuComponent,
+    PostarDadosComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { MenuComponent } from './menu/menu.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'valores', component: ValoresDescricaoComponent },
+      { path: 'incluir-dados', component: PostarDadosComponent },
   ])],
   providers: [],
   bootstrap: [AppComponent],
