@@ -1,9 +1,9 @@
 # valores-reciclaveis-novo
-site do projeto integrador da Univesp - 2º semestre 2021
+site do projeto integrador da Univesp - 2º semestre 2021<br>
 <b>Tecnologias utilizadas:</b><br>
-Front-end: Bootstrap, Angular, TypeScript
-Back-End: Java, Spring
-Base de Dados: MySQL
+Front-end: Bootstrap, Angular, TypeScript<br>
+Back-End: Java, Spring<br>
+Base de Dados: MySQL<br>
 
 # site_valores_reciclaveis
 Eu como <b>desenvolvedor</b><br>
