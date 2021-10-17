@@ -3,9 +3,8 @@ site do projeto integrador da Univesp - 2º semestre 2021<br><br>
 <b>Tecnologias utilizadas:</b><br>
 Front-end: Bootstrap, Angular, TypeScript<br>
 Back-End: Java, Spring<br>
-Base de Dados: MySQL<br>
+Base de Dados: MySQL<br><br>
 
-# site_valores_reciclaveis
 Eu como <b>desenvolvedor</b><br>
 Solicito <b>a criação de 3 componentes de front end integrados a uma base de dados</b><br>
 Com o propósito de <b>viabilizar a implantação da nova funcionalidade de controle de prestação de contas da AMLURB.</b>
