@@ -13,26 +13,26 @@ export class PostarDadosComponent implements OnInit {
   prestacao: Prestacao = new Prestacao(0, '', 0, 0, '')
 
   categoriasForm = [
-  "PAPEL BRANCO",
-  "JORNAL E REVISTA",
-  "PAPEL MISTO",
-  "PAPELÃO",
-  "TETRA",
-  "PLÁSTICO PEAD BRANCO",
-  "PLÁSTICO PEAD COLORIDO",
-  "LÁSTICO APARA BRANCA",
-  "PLÁSTICO APARA COLORIDA",
-  "PLÁSTICO PP BRANCO",
-  "PLÁSTICO PP COLORIDO",
-  "PET BRANCA",
-  "PET VERDE",
-  "PET LARANJA",
-  "PET AZUL",
-  "PET ÓLEO",
-  "VIDRO",
-  "FERROSO",
-  "OUTROS MATERIAIS",
-  "PRESTAÇÃO DE SERVIÇOS"]
+    "PAPEL_BRANCO",
+    "JORNAL_E_REVISTA",
+    "PAPEL_MISTO",
+    "PAPELAO",
+    "TETRA",
+    "PLASTICO_PEAD_BRANCO",
+    "PLASTICO_PEAD_COLORIDO",
+    "PLASTICO_APARA_BRANCO",
+    "PLASTICO_APARA_COLORIDO",
+    "PLASTICO_PP_BRANCO",
+    "PLASTICO_PP_COLORIDO",
+    "PET_BRANCA",
+    "PET_VERDE",
+    "PET_LARANJA",
+    "PET_AZUL",
+    "PET_OLEO",
+    "VIDRO",
+    "FERROSO",
+    "OUTROS_MATERIAIS",
+    "PRESTACAO_DE_SERVICOS"]
 
   zonasForm = ["LESTE", "OESTE", "NORTE", "SUL"]
 
@@ -51,5 +51,4 @@ export class PostarDadosComponent implements OnInit {
     
   }
 
-//funcao submit passando os dados
 }
