@@ -13,7 +13,7 @@
 	
 		<div class="row">
 			<div class="col-12">
-				<div class="table-responsive mb-0" style="border-radius: 0.5rem;">
+				<div class="table-responsive mb-0" style="border-radius: 0.5rem;" >
 					<table class="table align-middle table-striped table-bordered table-hover align-items-center">
 						<thead class="table-light align-middle text-center">
 							<tr>
@@ -24,23 +24,11 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>#</td>
-								<td>#</td>
-								<td>#</td>
-								<td>#</td>
-							</tr>
-							<tr>
-								<td>#</td>
-								<td>#</td>
-								<td>#</td>
-								<td>#</td>
-							</tr>
-							<tr>
-								<td>#</td>
-								<td>#</td>
-								<td>#</td>
-								<td>#</td>
+							<tr *ngFor="let prestacao of listaPrestacoes">
+								<td>{{prestacao.categoria}}</td>
+								<td>{{prestacao.qteMatComercializado}}</td>
+								<td>{{prestacao.valor}}</td>
+								<td>{{prestacao.zona}}</td>
 							</tr>
 						</tbody>
 					</table>

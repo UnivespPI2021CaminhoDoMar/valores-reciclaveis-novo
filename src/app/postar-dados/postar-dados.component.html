@@ -5,59 +5,40 @@
     <div class="container pt-4">
         <div class="row">
         <div class="col-12">
-            <form class="row align-items-center">
+            <form class="row align-items-center" #myForm="ngForm" (ngSubmit)="cadastrarPrestacao(myForm.value)">
                 <div class="form-group col-12">
                     <label for="categoria" class="form-label text-success">CATEGORIA</label>
-                    <select class="form-select form-select-lg mb-3 border border-success text-secondary" aria-label="Selecione o tipo de material">
+                    <select class="form-select form-select-lg mb-3 border border-success text-secondary" aria-label="Selecione o tipo de material" [(ngModel)]="prestacao.categoria" name="categoria">
                         <option value="1">Selecione o tipo de material</option>
-                        <option value="2">PAPEL BRANCO</option>
-                        <option value="3">JORNAL E REVISTA</option>
-                        <option value="4">PAPEL MISTO</option>
-                        <option value="5">PAPELÃO</option>
-                        <option value="6">TETRA</option>
-                        <option value="7">PLÁSTICO PEAD BRANCO</option>
-                        <option value="8">PLÁSTICO PEAD COLORIDO</option>
-                        <option value="9">PLÁSTICO APARA BRANCA</option>
-                        <option value="10">PLÁSTICO APARA COLORIDA</option>
-                        <option value="11">PLÁSTICO PP BRANCO</option>
-                        <option value="12">PLÁSTICO PP COLORIDO</option>
-                        <option value="13">PET BRANCA</option>
-                        <option value="14">PET VERDE</option>
-                        <option value="15">PET LARANJA</option>
-                        <option value="16">PET AZUL</option>
-                        <option value="17">PET ÓLEO</option>
-                        <option value="18">VIDRO</option>
-                        <option value="19">FERROSO</option>
-                        <option value="20">OUTROS MATERIAIS</option>
-                        <option value="21">PRESTAÇÃO DE SERVIÇOS</option>
+                        <option *ngFor="let categoria of categoriasForm" value="{{categoria}}">{{categoria}}</option>
                     </select>
                 </div>
                 <div class="form-group col-12">
                     <label for="kg-material" class="form-label text-success">QUANT. DE MATERIAL COMERCIALIZADO</label>
                     <div class="input-group">
                         <div class="input-group-text input-group-text-lg bg-success text-white mb-3 border border-success">Kg</div>
-                        <input type="number" class="form-control form-control-lg mb-3 border border-success text-secondary" id="kg-material" placeholder="Insira a quantidade">
+                        <input type="number" class="form-control form-control-lg mb-3 border border-success text-secondary" id="kg-material" placeholder="Insira a quantidade" [(ngModel)]="prestacao.qteMatComercializado" name="qteMatComercializado">
                     </div>
                 </div>
                 <div class="form-group col-12">
                     <label for="valor-material" class="form-label text-success">VALOR</label>
                     <div class="input-group">
                         <div class="input-group-text input-group-text-lg bg-success text-white mb-3 border border-success">R$</div>
-                        <input type="number" class="form-control form-control-lg mb-3 border border-success text-secondary" id="valor-material" placeholder="Insira o valor total">
+                        <input type="number" class="form-control form-control-lg mb-3 border border-success text-secondary" id="valor-material" placeholder="Insira o valor total" [(ngModel)]="prestacao.valor" name="valor">
                     </div>
                 </div>
                 <div class="form-group col-12">
                     <label for="categoria" class="form-label text-success">REGIÃO</label>
-                    <select class="form-select form-select-lg mb-3 border border-success text-secondary" aria-label="Selecione o tipo de material">
+                    <select class="form-select form-select-lg mb-3 border border-success text-secondary" aria-label="Selecione o tipo de material" [(ngModel)]="prestacao.zona" name="zona">
                         <option value="1">Selecione a Zona  de SP</option>
-                        <option value="2">LESTE</option>
-                        <option value="3">OESTE</option>
-                        <option value="4">NORTE</option>
-                        <option value="5">SUL</option>
+                        <option *ngFor="let zona of zonasForm" value="{{zona}}">{{zona}}</option>
                     </select>
                 </div>
                 <div class="col-4">
-                    <a class="btn btn-success btn-lg" href="app-amlurb-result.html" role="button">Inserir</a>
+                    <button class="btn btn-rounded" type="submit">Enviar 
+                        <i class="btn btn-success btn-lg"></i>
+                </button>
+                <!--    <a class="btn btn-success btn-lg" routerLink="" role="button">Inserir</a>-->
                 </div>
             </form>
         </div>

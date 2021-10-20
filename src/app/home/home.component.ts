@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Detalhes } from '../model/Detalhes'
+import { OverviewService } from '../service/overview.service'
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  listaOverview: Detalhes[];
+
+  constructor(private overviewService: OverviewService, private router: Router) { }
 
   ngOnInit(): void {
+    this.findOverview();
   }
+
+  findOverview() {
+    this.overviewService.getOverview().subscribe((resp: Detalhes[])=>{
+      console.log(resp);
+      this.listaOverview = resp;
+    }, err => {
+      alert(`Erro cod: ${err.message}`);
+    });
+  }
+
 
 }

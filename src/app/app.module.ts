@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { PostarDadosComponent } from './postar-dados/postar-dados.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,11 @@ import { PostarDadosComponent } from './postar-dados/postar-dados.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'valores', component: ValoresDescricaoComponent },
       { path: 'incluir-dados', component: PostarDadosComponent },
   ])],

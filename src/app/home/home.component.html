@@ -23,13 +23,13 @@
                                 <th>MÁXIMO</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>valor medio</td>
-                                <td>categoria</td>
-                                <td>zona</td>
-                                <td>minimo</td>
-                                <td>maximo</td>
+                        <tbody *ngFor="let item of listaOverview">
+                            <tr *ngFor="let categoria of item.categorias">
+                                <td>{{categoria.media}}</td>
+                                <td>{{categoria.nomeCategoria}}</td>
+                                <td>{{item.zona}}</td>
+                                <td>{{categoria.minimo}}</td>
+                                <td>{{categoria.maximo}}</td>
                             </tr>
                         </tbody>
                     </table>
