@@ -1,0 +1,39 @@
+<section>
+	<div class="container pt-4">
+	<!--	<div class="row">
+			<div class="form-group col-12">
+				<label for="data-consulta" class="form-label text-success">CONSULTA DATA</label>
+				<div class="input-group">
+					<div class="input-group-text input-group-addoninput-group-text-lg bg-success text-white mb-3 border border-success"><i class="fas fa-calendar-check"></i></div>
+					<input type="text" class="form-control date form-control-lg mb-3 border border-success text-secondary" id="data-consulta" placeholder="Consulte uma data">
+				</div>
+			</div>
+		</div>
+	-->
+	
+		<div class="row">
+			<div class="col-12">
+				<div class="table-responsive mb-0" style="border-radius: 0.5rem;" >
+					<table class="table align-middle table-striped table-bordered table-hover align-items-center">
+						<thead class="table-light align-middle text-center">
+							<tr>
+								<th>categoria</th>
+								<th>quantidade de material comercializado (Kg)</th>
+								<th>valor (R$)</th>
+								<th>zona</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let prestacao of listaPrestacoes">
+								<td>{{prestacao.categoria}}</td>
+								<td>{{prestacao.qteMatComercializado}}</td>
+								<td>{{prestacao.valor}}</td>
+								<td>{{prestacao.zona}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

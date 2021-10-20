@@ -1,0 +1,42 @@
+<!--<div class="p-3 mb-2 bg-success text-white text-center">
+    <p class="h2"><strong><i class="fas fa-recycle"></i> Amlurb</strong></p>
+</div> -->
+<section>
+    <div class="container pt-4">
+        <div class="row">
+        <div class="col-12">
+            <form class="row align-items-center" #myForm="ngForm" (ngSubmit)="cadastrarPrestacao(myForm.value)">
+                <div class="form-group col-12">
+                    <label for="categoria" class="form-label text-success">categoria</label>
+                    <select class="form-select form-select-lg mb-3 border border-success text-secondary" aria-label="Selecione o tipo de material" [(ngModel)]="prestacao.categoria" name="categoria">
+                        <option *ngFor="let categoria of categoriasForm" value="{{categoria}}">{{categoria}}</option>
+                    </select>
+                </div>
+                <div class="form-group col-12">
+                    <label for="kg-material" class="form-label text-success">quantidade de material comercializado</label>
+                    <div class="input-group">
+                        <div class="input-group-text input-group-text-lg bg-success text-white mb-3 border border-success">Kg</div>
+                        <input type="number" step=0.01 class="form-control form-control-lg mb-3 border border-success text-secondary" id="kg-material" placeholder="Insira a quantidade" [(ngModel)]="prestacao.qteMatComercializado" name="qteMatComercializado">
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <label for="valor-material" class="form-label text-success">valor</label>
+                    <div class="input-group">
+                        <div class="input-group-text input-group-text-lg bg-success text-white mb-3 border border-success">R$</div>
+                        <input type="number" step=0.01 class="form-control form-control-lg mb-3 border border-success text-secondary" id="valor-material" placeholder="Insira o valor total" [(ngModel)]="prestacao.valor" name="valor">
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <label for="categoria" class="form-label text-success">região</label>
+                    <select class="form-select form-select-lg mb-3 border border-success text-secondary" aria-label="Selecione o tipo de material" [(ngModel)]="prestacao.zona" name="zona">
+                        <option *ngFor="let zona of zonasForm" value="{{zona}}">{{zona}}</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-success btn-lg" type="submit">Inserir</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</section>
