@@ -9,8 +9,8 @@ import { PrestacaoService } from '../service/prestacao.service';
   styleUrls: ['./postar-dados.component.css']
 })
 export class PostarDadosComponent implements OnInit {
-  id: number
-  prestacao: Prestacao = new Prestacao(0, '', 0, 0, '')
+  id: number;
+  prestacao: Prestacao = new Prestacao(0, '', 0, 0, '');
 
   categoriasForm = [
     "PAPEL_BRANCO",
@@ -32,9 +32,9 @@ export class PostarDadosComponent implements OnInit {
     "VIDRO",
     "FERROSO",
     "OUTROS_MATERIAIS",
-    "PRESTACAO_DE_SERVICOS"]
+    "PRESTACAO_DE_SERVICOS"];
 
-  zonasForm = ["LESTE", "OESTE", "NORTE", "SUL"]
+  zonasForm = ["LESTE", "OESTE", "NORTE", "SUL"];
 
   constructor(private prestacaoService : PrestacaoService, private route: ActivatedRoute,
     private router: Router) { }
@@ -44,9 +44,11 @@ export class PostarDadosComponent implements OnInit {
 
   async cadastrarPrestacao(data){
     try {
-      const response = await this.prestacaoService.postPrestacao(data)
+      const response = await this.prestacaoService.postPrestacao(data);
+      alert("Dados inseridos com sucesso!");
     } catch (error) {
-      console.error(error)
+      console.error(error);     
+      alert("Não foi possível inserir os dados. Preencha os campos corretamente.");
     }
     
   }

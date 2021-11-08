@@ -1,3 +1,11 @@
 form {
     text-transform: uppercase;
 }
+
+span{
+    font-size: 10px;
+    color: red;
+    display: block;
+    margin-bottom: 3px;
+    text-transform: none;
+}

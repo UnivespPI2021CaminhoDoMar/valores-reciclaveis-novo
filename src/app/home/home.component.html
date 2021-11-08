@@ -16,20 +16,20 @@
                     <table class="table align-middle table-striped table-bordered table-hover align-items-center">
                         <thead class="table-light align-middle text-center">
                             <tr>
-                                <th>média</th> <!-- do valor pela quantidade do material comercializado tendo em vista a categoria-->
                                 <th>categoria</th>
                                 <th>zona</th> <!-- (leste, sul, etc)-->
                                 <th>mínimo</th>
                                 <th>máximo</th>
+                                <th>média</th> <!-- do valor pela quantidade do material comercializado tendo em vista a categoria-->
                             </tr>
                         </thead>
                         <tbody *ngFor="let item of listaOverview">
                             <tr *ngFor="let categoria of item.categorias">
-                                <td>{{categoria.media}}</td>
                                 <td>{{categoria.nomeCategoria}}</td>
                                 <td>{{item.zona}}</td>
                                 <td>{{categoria.minimo}}</td>
                                 <td>{{categoria.maximo}}</td>
+                                <td>{{categoria.media}}</td>
                             </tr>
                         </tbody>
                     </table>
