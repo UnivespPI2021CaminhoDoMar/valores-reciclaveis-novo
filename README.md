@@ -24,11 +24,10 @@ Com o propósito de <b>viabilizar a implantação da nova funcionalidade de cont
 <b>Quando</b> eu clicar em <b>Home</b> ou <b>Prestação de Contas</b><br>
 <b>Então</b> eu serei redirecionado às respectivas telas.<br>
 
-<b>Dado</b> que estou na url <b>.../admin</b> (relativa ao gerenciamento dos dados, não precisa prototipar)<br>
-<b>Quando</b> eu inserir dados nos campos “Categoria”, “Quantidade de material comercializado (kg)”, “Valor (R$)” e “Zona”<br>
-<b>E</b> clicar em “ok”<br>
-<b>E</b> migrar os dados inseridos <br>
-<b>Então</b> eu visualizarei os dados inseridos nas telas Home e Prestação de Contas<br>
+<b>Dado</b> que eu estou na tela <b>Inserir Dados</b><br>
+<b>Quando</b> eu preencher os campos “Categoria”, “Quantidade de material comercializado (kg)”, “Valor (R$)” e “Zona”<br>
+<b>E</b> clicar em “Inserir”<br>
+<b>Então</b> as tabelas presentes nas telas em Home e Prestação de Contas levarão em conta o novo dado inserido.<br>
 
 # Itens relativos às ações do usuário
 ### Home
