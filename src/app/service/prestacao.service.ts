@@ -10,11 +10,11 @@ export class PrestacaoService {
   api: any;
   
   constructor(private http: HttpClient) { 
-    this.api = Axios.create({baseURL:'http://localhost:8080'})
+    this.api = Axios.create({baseURL:'http://localhost:8080'});
   }
 
   getAllPrestacoes(){
-    return this.http.get<Prestacao>("http://localhost:8080/prestacao-contas")
+    return this.http.get<Prestacao>("http://localhost:8080/prestacao-contas");
   }
 
   async postPrestacao(data){
